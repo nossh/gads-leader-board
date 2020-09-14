@@ -1,15 +1,15 @@
 package com.example.gadsleaderboard;
 
-public class ListLearners {
+public class ListSkillIQ {
     private String name;
-    private String hours;
+    private String score;
     private String country;
 
 
 
-    public ListLearners(String leanerName, String leanerHour, String learnerCountry) {
+    public ListSkillIQ(String leanerName, String leanerScore, String learnerCountry) {
         this.name = leanerName;
-        this.hours = leanerHour;
+        this.score = leanerScore;
         this.country = learnerCountry;
     }
 
@@ -19,11 +19,9 @@ public class ListLearners {
         return name;
     }
 
-
-    public String getLeanerHour() {
-        return hours;
+    public String getLeanerScore() {
+        return score;
     }
-
 
     public String getLearnerCountry() {
         return country;

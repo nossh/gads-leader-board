@@ -9,7 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 
 
 import android.view.View;
-import android.view.Window;
+
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,7 +29,7 @@ public class ProjectSubmission extends AppCompatActivity {
     TextView lastNameField;
     TextView emailField;
     TextView gitLinkField;
-    GoogleWeb googleWeb;
+
 
 
 
@@ -39,12 +39,10 @@ public class ProjectSubmission extends AppCompatActivity {
         setContentView(R.layout.activity_project_submission);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
 
-
-        confirmDialog();
 
         Button submitButton = findViewById(R.id.button_submit);
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +52,7 @@ public class ProjectSubmission extends AppCompatActivity {
             }
         });
 
-        //confirmDialog();
+
 
     }
     public void confirmDialog () {
@@ -94,7 +92,6 @@ public class ProjectSubmission extends AppCompatActivity {
 
 
 
-                //successSub();nn
             }
         });
         iconClose.setOnClickListener(new View.OnClickListener() {
@@ -105,9 +102,7 @@ public class ProjectSubmission extends AppCompatActivity {
             }
         });
 
-        //confirm.show().getWindow();
         Objects.requireNonNull(confirm.show().getWindow()).setBackgroundDrawableResource(R.drawable.round_rec);
-
 
 
     }
